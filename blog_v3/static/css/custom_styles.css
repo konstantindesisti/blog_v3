@@ -1,0 +1,100 @@
+/* Global page styles */
+body {
+    background-color: #303030; /* A dark gray color */
+    color: white; /* Set text color to white */
+    font-family: Arial, sans-serif; /* Optional: sets a universal font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white; /* Sets all heading colors to white */
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    color: #cccccc; /* Light gray color on hover */
+}
+
+/* Additional styles to ensure links are visible and match the theme */
+a {
+    color: #ffffff; /* White color for links */
+    text-decoration: none; /* No underline */
+}
+
+a:hover, a:focus {
+    color: #cccccc; /* Lighter gray for hover/focus states */
+    text-decoration: underline; /* Underline on hover/focus for better visibility */
+
+
+/* SVG icons */
+/* Base style for the icon stack */
+/* Default styles for embedded SVG icons */
+svg {
+    fill: rgb(145, 27, 27); /* Default fill color for all SVG icons */
+    transition: fill 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover styles for SVG icons */
+svg:hover {
+    fill: #cccccc; /* Light gray fill color on hover */
+}
+
+/* Default styles for Font Awesome icons */
+.fa {
+    color: white; /* Default color for all Font Awesome icons */
+    transition: color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+
+.fa-stack {
+    color: rgb(212, 186, 56); /* Set the color for the icons in the stack */
+}
+
+
+/* Enhanced hover effect with scaling and shadow */
+.fa-stack:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+    text-shadow: 0 0 10px rgba(104, 98, 98, 0.7); /* Adds a soft glow for visibility */
+}
+
+
+
+
+
+
+
+#flash-messages {
+    position: fixed;      /* Fixed positioning relative to the viewport */
+    top: 50px;            /* Adjust this value based on the height of your navigation bar */
+    left: 50%;            /* Center align the container */
+    transform: translateX(-50%); /* Shifts the container left by half its width, centering it exactly */
+    z-index: 1050;        /* Ensures it's above most other elements */
+    width: auto;
+    background-color: rgba(148, 134, 14, 0.2); /* Semi-transparent black background */
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+}
+.flash {
+    padding: 8px 15px;  /* Top and bottom padding reduced */
+    margin-bottom: 10px; /* Maintains spacing between multiple messages */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    width: auto;
+    margin-bottom: 10px;
+    display: block;
+    max-width: 600px; /* Optional, depending on design requirements */
+    text-align: left; /* Ensures text is centered */
+    position: relative; /* Needed for absolute positioning of close button */
+}
+.close {
+    position: absolute;
+    top: -3%;              /* Adjust as necessary for vertical alignment */
+    right: 5px;           /* Right align the button */
+    padding: 5px 8px;      /* Sufficient clickable area */
+    background: transparent;  /* Make background transparent */
+    border: none;          /* Remove borders */
+    color: rgb(255, 255, 255);          /* Text color similar to the flash message text color */
+    font-size: 40px;       /* Size of the 'X' */
+    cursor: pointer;       /* Cursor to pointer to indicate clickability */
+    opacity: 0.8;          /* Adjust opacity to blend or stand out as necessary */
+}
