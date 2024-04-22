@@ -1,1 +1,1 @@
-web: gunicorn 'blog_v3:create_application("blog_v3.Config")'
+web: gunicorn 'blog_v3:create_application()'

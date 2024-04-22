@@ -11,9 +11,9 @@ bootstrap = Bootstrap5()
 ckeditor = CKEditor()
 
 
-def create_application(config_file=Config):
+def create_application():
     app = Flask(__name__)
-    app.config.from_object(config_file)
+    app.config.from_object(Config)
 
     login_manager.init_app(app)
     login_manager.login_view = 'main.login'
@@ -28,3 +28,8 @@ def create_application(config_file=Config):
     app.register_blueprint(main)
 
     return app
+
+
+if __name__ == '__main__':
+    app = create_application()
+    app.run()
